@@ -1,129 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>欢迎来到我的网站</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Microsoft YaHei", sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        min-height: 100vh;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-
-      header {
-        text-align: center;
-        padding: 3rem 0;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        color: #2c3e50;
-        margin-bottom: 1rem;
-      }
-
-      .subtitle {
-        font-size: 1.2rem;
-        color: #7f8c8d;
-      }
-
-      .content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .card {
-        background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-      }
-
-      .card h2 {
-        color: #2c3e50;
-        margin-bottom: 1rem;
-      }
-
-      .card p {
-        color: #666;
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        margin-top: 3rem;
-        color: #666;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          padding: 1rem;
-        }
-
-        h1 {
-          font-size: 2rem;
-        }
-      }
-    </style>
+    <title>Vite + React</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>欢迎来到我的网站</h1>
-        <p class="subtitle">探索、创造、分享</p>
-      </header>
-
-      <div class="content">
-        <div class="card">
-          <h2>关于我们</h2>
-          <p>
-            我们是一个充满激情的团队，致力于创造优秀的数字体验。在这里，我们分享知识，交流想法，共同成长。
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>我们的服务</h2>
-          <p>
-            提供专业的网站开发、设计服务，帮助您的业务在数字世界中脱颖而出。我们注重用户体验，追求卓越品质。
-          </p>
-        </div>
-
-        <div class="card">
-          <h2>联系我们</h2>
-          <p>
-            如果您有任何问题或建议，欢迎随时与我们联系。我们期待听到您的声音！
-          </p>
-        </div>
-      </div>
-
-      <footer>
-        <p>© 2024 我的网站. 保留所有权利。</p>
-      </footer>
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
