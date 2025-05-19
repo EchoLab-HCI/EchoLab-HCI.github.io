@@ -8,9 +8,10 @@ function Navbar({ darkMode, setDarkMode }) {
         <Link to="/">EchoLab HCI</Link>
       </div>
       <div className="nav-links">
-        <Link to="/">首页</Link>
-        <Link to="/about">关于我们</Link>
-        <Link to="/contact">联系我们</Link>
+        <Link to="/">Home</Link>
+        <Link to="/members">Members</Link>
+        <Link to="/publications">Publications</Link>
+        <Link to="/projects">Projects</Link>
         <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? "🌞" : "🌙"}
         </button>

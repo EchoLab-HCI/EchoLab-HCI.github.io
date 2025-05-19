@@ -1,3 +1,23 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --card-bg: #ffffff;
+  --bg-color: #f9fafb;
+  --border-color: #e5e7eb;
+}
+
+.dark {
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --text-color: #f9fafb;
+  --text-light: #d1d5db;
+  --card-bg: #1f2937;
+  --bg-color: #111827;
+  --border-color: #374151;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,94 +25,122 @@
 }
 
 body {
-  font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f5f7fa;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .app {
   min-height: 100vh;
-  transition: background-color 0.3s ease;
-}
-
-.app.dark {
-  background-color: #1a1a1a;
-  color: #fff;
-}
-
-.app.dark .navbar,
-.app.dark .feature-card,
-.app.dark .about-section,
-.app.dark .contact-info,
-.app.dark .contact-form {
-  background: #2d2d2d;
-  color: #fff;
-}
-
-.app.dark h1,
-.app.dark h2,
-.app.dark h3 {
-  color: #fff;
-}
-
-.app.dark p,
-.app.dark li {
-  color: #ccc;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
+  flex: 1;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.theme-toggle {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--border-color);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
+    padding: 1rem;
   }
-}
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  .navbar {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    gap: 1rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .nav-links a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
