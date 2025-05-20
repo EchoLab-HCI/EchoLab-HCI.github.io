@@ -3,53 +3,61 @@ import "./Members.css";
 function Members() {
   const members = [
     {
+      name: "Yijing Jiang",
+      title: "PhD Student",
+      role: "Lab Co-Creator",
+      image: "/avatar/Yijing.jpg",
+      bio: "Personal Fabrication\nAssistive Technology\nInteraction Design",
+      email: "y.jiang@cs.au.dk",
+      homepage: "https://www.yijingjiang.com/",
+      school: "Aarhus University",
+    },
+    {
       name: "Black Sun",
       title: "Master Student",
-      role: "Lab Creator",
-      image: "/EchoLab-HCI.github.io/avatar/Black.png",
+      role: "Lab Co-Creator",
+      image: "/avatar/Black.png",
       bio: "Social Computing\nHealth",
       email: "blackthompson770@gmail.com",
+      homepage: "https://blackthompson.github.io/",
+      school: "Aarhus University",
     },
     {
       name: "Haiyang Xu",
       title: "Master Student",
       role: "Lab Co-Creator",
-      image: "/EchoLab-HCI.github.io/avatar/sea.png",
+      image: "/avatar/sea.png",
       bio: "Accessibility\nHealth\nFabrication",
       email: "uniqsea@outlook.com",
+      school: "Aarhus University",
     },
-    // {
-    //   name: "Michael Chen",
-    //   title: "Ph.D. Student",
-    //   role: "Graduate Researcher",
-    //   image: "https://via.placeholder.com/150",
-    //   bio: "Multimodal Interaction\nGesture Recognition\nEye Tracking\nNatural Language Processing\nAI Interfaces",
-    //   email: "michael.chen@example.com",
-    // },
-    // {
-    //   name: "Michael Chen",
-    //   title: "Ph.D. Student",
-    //   role: "Graduate Researcher",
-    //   image: "https://via.placeholder.com/150",
-    //   bio: "Research focuses on multimodal interaction and intelligent interface design for enhanced user experience.",
-    //   email: "michael.chen@example.com",
-    // },
-    // {
-    //   name: "Michael Chen",
-    //   title: "Ph.D. Student",
-    //   role: "Graduate Researcher",
-    //   image: "https://via.placeholder.com/150",
-    //   bio: "Research focuses on multimodal interaction and intelligent interface design for enhanced user experience.",
-    //   email: "michael.chen@example.com",
-    // },
-    // {
-    //   name: "Michael Chen",
-    //   title: "Ph.D. Student",
-    //   role: "Graduate Researcher",
-    //   image: "https://via.placeholder.com/150",
-    //   bio: "Research focuses on multimodal interaction and intelligent interface design for enhanced user experience.",
-    //   email: "michael.chen@example.com",
-    // },
+    {
+      name: "Yunhui Song",
+      title: "Master Student",
+      role: "Lab Co-Creator",
+      image: "/avatar/yunhui.jpg",
+      bio: "Digital Fabrication\nRobotics",
+      email: "au777954@uni.au.dk",
+      school: "Aarhus University",
+    },
+    {
+      name: "Ge Kacy Fu",
+      title: "Master Student",
+      role: "Member",
+      image: "/avatar/Kacy.jpg",
+      bio: "Collaboration",
+      email: "kacyfu@163.com",
+      school: "Aarhus University",
+    },
+    {
+      name: "Yang Liu",
+      title: "Master Student",
+      role: "Member",
+      image: "/avatar/yang.jpg",
+      bio: "Extended Reality",
+      email: "yangliu@post.au.dk",
+      school: "Aarhus University",
+    },
   ];
 
   return (
@@ -62,13 +70,39 @@ function Members() {
               <img src={member.image} alt={member.name} />
             </div>
             <div className="member-info">
-              <h2>{member.name}</h2>
-              <p className="member-title">{member.title}</p>
-              <p className="member-role">{member.role}</p>
-              <p className="member-bio">{member.bio}</p>
-              <a href={`mailto:${member.email}`} className="member-email">
-                {member.email}
-              </a>
+              <div className="member-header">
+                <h2>{member.name}</h2>
+                <div className="member-title-school">
+                  <span>{member.title}</span>
+                  {member.school && <span>{member.school}</span>}
+                </div>
+                <p className="member-role">{member.role}</p>
+              </div>
+              <div className="member-bio-block">
+                <p className="member-bio">{member.bio}</p>
+              </div>
+              <div className="member-actions">
+                <a href={`mailto:${member.email}`} className="member-email">
+                  {member.email}
+                </a>
+                {member.homepage && (
+                  <a
+                    href={member.homepage}
+                    className="member-homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span
+                      role="img"
+                      aria-label="homepage"
+                      style={{ marginRight: "0.4em" }}
+                    >
+                      🌐
+                    </span>
+                    Homepage
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}

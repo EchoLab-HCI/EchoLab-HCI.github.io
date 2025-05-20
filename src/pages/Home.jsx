@@ -47,7 +47,7 @@ function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <h1>Welcome to EchoLab HCI</h1>
+        <h1>Welcome to Echo Lab</h1>
         <p>Exploring the Future of Human-Computer Interaction</p>
         <div className="hero-buttons">
           <Link to="/projects" className="cta-button">

@@ -5,17 +5,30 @@
 }
 
 .hero {
+  background: url("/hero-bg.jpg") center center/cover no-repeat;
+  border-radius: 2rem;
+  padding: 4rem 2rem;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  padding: 6rem 2rem;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: white;
-  border-radius: 1.5rem;
-  margin-bottom: 4rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 保证内容可读性，可加半透明遮罩 */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 41, 59, 0.35); /* 深色半透明遮罩 */
+  border-radius: 2rem;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {

@@ -35,6 +35,9 @@ body {
 
 .app {
   min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
   display: flex;
   flex-direction: column;
 }
@@ -143,4 +146,8 @@ img {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }
+}
+
+.main-content {
+  background: none;
 }
