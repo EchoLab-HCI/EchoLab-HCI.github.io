@@ -4,42 +4,59 @@ import "./Home.css";
 function Home() {
   const news = [
     {
-      date: "March 15, 2024",
-      title: "Paper Accepted at CHI 2024",
+      date: "April 25, 2025",
+      title: "Participated in CHI 2025, Yokohama, Japan🌸",
       content:
-        "Our research on multimodal interaction has been accepted at CHI 2024.",
+        "🎉🎉🎉 One Full Paper and One Interactivity Paper were accepted at CHI 2025.",
     },
     {
-      date: "February 20, 2024",
-      title: "NSF Grant Awarded",
+      top: true,
+      date: "Open Call",
+      title: "🔥🔥🔥Finding collaborators!!!🔥🔥🔥",
       content:
-        "Our project 'Intelligent Interface Design Based on Multimodal Interaction' has received funding from the National Science Foundation.",
-    },
-    {
-      date: "January 10, 2024",
-      title: "UIST 2024 Conference",
-      content:
-        "Lab members attended the UIST 2024 conference in San Francisco.",
+        "If you are farmiliar with PCB design, FPGA, or embedded system, please contact Yijing Jiang! We are looking for collaborators to work on a project about interactive technology.",
     },
   ];
 
+  // Separate top news and normal news
+  const topNews = news.filter((item) => item.top);
+  const normalNews = news.filter((item) => !item.top);
+
   const researchInterests = [
     {
-      title: "Multimodal Interaction",
+      title: "Fabrication",
       description:
-        "Researching speech, gesture, and eye-tracking technologies to create natural human-computer interaction experiences.",
-      icon: "🎯",
+        "Using experimental prototyping and digital fabrication techniques to explore novel interactive technologies, tools, and materials for human-centered research.",
+      icon: "🧪",
     },
     {
-      title: "Virtual Reality",
+      title: "Extended Reality",
       description:
-        "Exploring VR applications in education, healthcare, and other domains to enhance user experiences.",
-      icon: "🎮",
+        "Exploring eye-tracking, gesture, and speech technologies to create natural extended reality experiences.",
+      icon: "👓",
     },
     {
-      title: "Intelligent Interfaces",
+      title: "Health and Well-being",
       description:
-        "Developing AI-powered interface design methods to improve user experience and interaction efficiency.",
+        "Exploring how technologies can support physical, mental, and emotional health through user-centered design and in-depth qualitative research with individuals and communities.",
+      icon: "❤️‍🩹",
+    },
+    {
+      title: "Social Computing",
+      description:
+        "Investigating how people interact, collaborate, and build communities through digital platforms, with a focus on designing interactive systems and using qualitative methods to understand social dynamics.",
+      icon: "🧑‍🤝‍🧑",
+    },
+    {
+      title: "Human-Centered AI",
+      description:
+        "Designing AI systems that prioritize human values, interpretability, and collaboration—combining interactive technologies with qualitative insights to ensure ethical, inclusive, and user-aligned intelligence.",
+      icon: "⚖️",
+    },
+    {
+      title: "Human-AI Interaction",
+      description:
+        "Exploring how humans interact with AI-driven systems through interfaces, behaviors, and feedback loops,focusing on usability, trust, and understanding.",
       icon: "🤖",
     },
   ];
@@ -47,8 +64,31 @@ function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <h1>Welcome to Echo Lab</h1>
-        <p>Exploring the Future of Human-Computer Interaction</p>
+        <h1>Welcome to Echo Lab 🪸</h1>
+        <p>
+          <strong>Echo Lab</strong> is a{" "}
+          <strong> research group founded by students</strong> from Aarhus
+          University, Denmark, dedicated to advancing{" "}
+          <strong>Human-Computer Interaction (HCI)</strong>.<br />
+          <br />
+          We are passionate about{" "}
+          <span style={{ color: "var(--primary-color)", fontWeight: 600 }}>
+            improving human well-being
+          </span>{" "}
+          and{" "}
+          <span style={{ color: "var(--primary-color)", fontWeight: 600 }}>
+            designing inclusive technologies
+          </span>
+          . Our mission is to{" "}
+          <span style={{ color: "var(--secondary-color)", fontWeight: 600 }}>
+            support vulnerable
+          </span>{" "}
+          and{" "}
+          <span style={{ color: "var(--secondary-color)", fontWeight: 600 }}>
+            underserved communities
+          </span>{" "}
+          through innovative research and thoughtful design.
+        </p>
         <div className="hero-buttons">
           <Link to="/projects" className="cta-button">
             Explore Projects
@@ -75,7 +115,15 @@ function Home() {
       <section className="news">
         <h2>Latest News</h2>
         <div className="news-list">
-          {news.map((item, index) => (
+          {topNews.map((item, index) => (
+            <div key={"top-" + index} className="news-item top-news">
+              <div className="news-top-label">TOP</div>
+              <div className="news-date">{item.date}</div>
+              <h3>{item.title}</h3>
+              <p>{item.content}</p>
+            </div>
+          ))}
+          {normalNews.map((item, index) => (
             <div key={index} className="news-item">
               <div className="news-date">{item.date}</div>
               <h3>{item.title}</h3>

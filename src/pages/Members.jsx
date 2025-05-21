@@ -3,9 +3,19 @@ import "./Members.css";
 function Members() {
   const members = [
     {
+      name: "Mengyao Guo",
+      title: "Assistant Professor",
+      role: "Member",
+      image: "/avatar/Mengyao.jpg",
+      bio: "Human-AI Co-Creation\nVisual Storytelling\nAIGC & XR\nDigital Cultural Heritage",
+      email: "guomengyao@hit.edu.cn",
+      homepage: "https://guomengyao.com/",
+      school: "Harbin Institute of Technology, Shenzhen",
+    },
+    {
       name: "Yijing Jiang",
       title: "PhD Student",
-      role: "Lab Co-Creator",
+      role: "Lab Co-Founder",
       image: "/avatar/Yijing.jpg",
       bio: "Personal Fabrication\nAssistive Technology\nInteraction Design",
       email: "y.jiang@cs.au.dk",
@@ -13,9 +23,20 @@ function Members() {
       school: "Aarhus University",
     },
     {
+      name: "Yufeng Wu",
+      title: "PhD Student",
+      role: "Member",
+      image: "/avatar/yufeng.jpg",
+      bio: "Health\nRemembering Experiences\nAugmented Reality",
+      email: "Yufeng.wu@uts.edu.au",
+      homepage:
+        "https://www.linkedin.com/in/yufeng-wu-b53566286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      school: "University of Technology Sydney",
+    },
+    {
       name: "Black Sun",
       title: "Master Student",
-      role: "Lab Co-Creator",
+      role: "Lab Co-Founder",
       image: "/avatar/Black.png",
       bio: "Social Computing\nHealth",
       email: "blackthompson770@gmail.com",
@@ -25,7 +46,7 @@ function Members() {
     {
       name: "Haiyang Xu",
       title: "Master Student",
-      role: "Lab Co-Creator",
+      role: "Lab Co-Founder",
       image: "/avatar/sea.png",
       bio: "Accessibility\nHealth\nFabrication",
       email: "uniqsea@outlook.com",
@@ -34,7 +55,7 @@ function Members() {
     {
       name: "Yunhui Song",
       title: "Master Student",
-      role: "Lab Co-Creator",
+      role: "Lab Co-Founder",
       image: "/avatar/yunhui.jpg",
       bio: "Digital Fabrication\nRobotics",
       email: "au777954@uni.au.dk",
@@ -57,6 +78,15 @@ function Members() {
       bio: "Extended Reality",
       email: "yangliu@post.au.dk",
       school: "Aarhus University",
+    },
+    {
+      name: "Kexin (Bella) Nie",
+      title: "Master",
+      role: "Member",
+      image: "/avatar/Bella.jpg",
+      bio: "Human-AI Co-Creation\nAIGC & XR\nDigital Cultural Heritage\nInteraction Design",
+      email: "niekexinbella@gmail.com",
+      school: "The University of Sydney",
     },
   ];
 

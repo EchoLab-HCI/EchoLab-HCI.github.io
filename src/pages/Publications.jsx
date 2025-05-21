@@ -33,6 +33,38 @@ function Publications() {
           type: "Conference",
           link: "https://dl.acm.org/doi/full/10.1145/3706599.3721178",
         },
+        {
+          title:
+            "Resonix: Prototyping VR for Fostering Remote Collaboration in Sound Art Curation",
+          authors: [
+            { name: "Zijun Wan", corresponding: true },
+            { name: "Yuxuan Guo" },
+            { name: "Kexin Nie" },
+            { name: "Haowei Xiong" },
+            { name: "Xudong Cai" },
+            { name: "Fanjing Meng" },
+            { name: "Xin Tong", corresponding: true },
+          ],
+          venue:
+            "Proceedings of the Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems",
+          type: "Conference",
+          link: "https://dl.acm.org/doi/full/10.1145/3706599.3720247",
+        },
+        {
+          title:
+            "Conversational Agents to Support People with Communication Disability: A Co-design Study with Speech Pathologists",
+          authors: [
+            { name: "Fahad Khan" },
+            { name: "Yufeng Wu" },
+            { name: "Julia Dray" },
+            { name: "Bronwyn Hemsley" },
+            { name: "A Baki Kocaballi" },
+          ],
+          venue:
+            "Proceedings of the Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems",
+          type: "Conference",
+          link: "https://dl.acm.org/doi/full/10.1145/3706599.3719800",
+        },
       ],
     },
   ];
